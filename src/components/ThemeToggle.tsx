@@ -1,33 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
-export default function ThemeToggle() {
-  const [dark, setDark] = useState(true);
-
-  useEffect(() => {
-    const saved = localStorage.getItem("theme");
-    const isDark = saved ? saved === "dark" : true;
-    setDark(isDark);
-    document.documentElement.classList.toggle("dark", isDark);
-  }, []);
-
-  function toggle() {
-    const next = !dark;
-    setDark(next);
-    document.documentElement.classList.toggle("dark", next);
-    localStorage.setItem("theme", next ? "dark" : "light");
-  }
+export default function ThemeToggle({
+  theme,
+  onToggle,
+}: {
+  theme: "light" | "dark";
+  onToggle: () => void;
+}) {
+  const Icon = theme === "dark" ? Sun : Moon;
 
   return (
     <button
-      onClick={toggle}
-      className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-black/10 bg-white/70 text-zinc-900 shadow-sm backdrop-blur transition hover:bg-white dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15"
-      aria-label="Toggle theme"
       type="button"
+      onClick={onToggle}
+      aria-label="Toggle theme"
+      className="grid h-10 w-10 place-items-center rounded-xl border border-black/10 bg-white text-zinc-900 shadow-sm transition hover:bg-zinc-50"
     >
-      {dark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+      <Icon size={18} />
     </button>
   );
 }

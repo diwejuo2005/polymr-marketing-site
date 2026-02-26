@@ -23,8 +23,7 @@ export default function Section({
   return (
     <motion.section
       initial={{ opacity: 0, ...offset }}
-      whileInView={{ opacity: 1, x: 0, y: 0 }}
-      viewport={{ once: true, amount: 0.25 }}
+      animate={{ opacity: 1, x: 0, y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut", delay }}
     >
       {children}
