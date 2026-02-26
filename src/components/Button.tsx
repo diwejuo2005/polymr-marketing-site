@@ -1,3 +1,4 @@
+// src/components/Button.tsx
 import Link from "next/link";
 
 type Variant = "primary" | "secondary" | "ghost";
@@ -6,9 +7,9 @@ const styles: Record<Variant, string> = {
   primary:
     "bg-violet-500/90 hover:bg-violet-500 text-black font-medium shadow-[0_10px_30px_rgba(140,90,255,0.25)]",
   secondary:
-    "bg-white/10 hover:bg-white/15 text-white border border-white/10",
+    "border border-black/10 bg-white text-zinc-900 shadow-sm hover:bg-zinc-50 dark:border-white/10 dark:bg-white/10 dark:text-white dark:hover:bg-white/15 dark:shadow-none",
   ghost:
-    "bg-transparent hover:bg-white/10 text-white",
+    "bg-transparent text-zinc-900 hover:bg-black/5 dark:text-white dark:hover:bg-white/10",
 };
 
 export default function Button({

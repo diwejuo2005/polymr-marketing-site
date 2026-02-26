@@ -1,51 +1,25 @@
+/* src/app/globals.css */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  color-scheme: light;
-}
-
-html, body {
+/* Force dark as default */
+html,
+body {
   height: 100%;
 }
 
 body {
-  @apply bg-white text-zinc-900;
-}
-
-.dark {
-  color-scheme: dark;
-}
-
-.dark body {
-  @apply bg-zinc-950 text-zinc-100;
-}
-
-@keyframes polymr-marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-.marquee {
-  position: relative;
-  overflow: hidden;
-}
-
-.marquee__track {
-  display: flex;
-  width: max-content;
-  animation: polymr-marquee 18s linear infinite;
-}
-
-.marquee:hover .marquee__track {
-  animation-play-state: paused;
-}
-
-/* Respect reduced motion */
-@media (prefers-reduced-motion: reduce) {
-  .marquee__track {
-    animation: none;
-    transform: translateX(0);
-  }
+  background: radial-gradient(
+      circle at 15% 15%,
+      rgba(139, 92, 246, 0.35),
+      transparent 45%
+    ),
+    radial-gradient(
+      circle at 85% 5%,
+      rgba(124, 58, 237, 0.25),
+      transparent 45%
+    ),
+    linear-gradient(180deg, #1a1033 0%, #110b22 100%);
+  color: #f4f4f5;
 }

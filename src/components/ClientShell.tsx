@@ -1,32 +1,24 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
-
-type Theme = "light" | "dark";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ChatWidget from "@/components/ChatWidget";
 
 export default function ClientShell({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<Theme>("dark");
-
-  useEffect(() => {
-    const saved = (localStorage.getItem("theme") as Theme | null) ?? "dark";
-    setTheme(saved);
-    document.documentElement.classList.toggle("dark", saved === "dark");
-  }, []);
-
-  const toggleTheme = () => {
-    const next: Theme = theme === "dark" ? "light" : "dark";
-    setTheme(next);
-    localStorage.setItem("theme", next);
-    document.documentElement.classList.toggle("dark", next === "dark");
-  };
-
   return (
-    <div className="min-h-screen">
-      <Navbar theme={theme} onToggleTheme={toggleTheme} />
-      <main className="pt-8">{children}</main>
+    <div
+      className="min-h-screen text-zinc-100"
+      style={{
+        background:
+          "radial-gradient(circle at 15% 10%, rgba(124, 58, 237, 0.25), transparent 40%)," +
+          "radial-gradient(circle at 85% 0%, rgba(88, 28, 135, 0.25), transparent 45%)," +
+          "linear-gradient(180deg, #0b0718 0%, #070513 100%)",
+      }}
+    >
+      <Navbar />
+      <main>{children}</main>
       <Footer />
+      <ChatWidget />
     </div>
   );
 }
