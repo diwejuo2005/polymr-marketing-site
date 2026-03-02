@@ -245,7 +245,33 @@ export default function HomePage() {
           </Reveal>
         </div>
       </div>
+      {/* ── THE PROBLEM ── */}
+        <div className="mt-24">
+  <Reveal from="up">
+    <h2 className="text-center text-3xl font-bold tracking-tight text-zinc-900 dark:text-white md:text-4xl">
+      Most manufacturers are stuck between spreadsheets and expensive MRP systems.
+    </h2>
+  </Reveal>
 
+  <div className="mt-10 grid gap-4 md:grid-cols-4">
+    {[
+      { k: "70%", v: "Still enter data manually" },
+      { k: "68%", v: "Analyze operations in spreadsheets" },
+      { k: "$40k–$325k", v: "Typical MRP implementation cost" },
+      { k: "3+ months", v: "Time to go live (200+ internal hours)" },
+    ].map((item) => (
+      <div key={item.k} className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center">
+        <div className="text-3xl font-bold text-white">{item.k}</div>
+        <div className="mt-2 text-sm text-white/70">{item.v}</div>
+      </div>
+    ))}
+  </div>
+
+  <p className="mt-6 text-center text-sm text-white/50 max-w-2xl mx-auto">
+    Traditional ERP projects require consultants, data migrations, and long rollout cycles.
+    Smaller and mid-sized factories often delay modernization because the cost and time are too high.
+  </p>
+</div>
       {/* ── TRADITIONAL ERP STATS ── */}
       <div className="mt-24">
         <Reveal from="up" delay={0.06}>
@@ -412,7 +438,42 @@ export default function HomePage() {
           ))}
         </div>
       </div>
+          {/* ── SUPPLY CHAIN NETWORK VISION ── */}
+<div className="mt-24">
+  <Reveal from="up">
+    <h2 className="text-center text-3xl font-bold text-white md:text-4xl">
+      Within months, connect your supply chain.
+    </h2>
+  </Reveal>
 
+  <div className="mt-10 grid gap-6 md:grid-cols-2">
+
+    <Card className="p-7">
+      <div className="text-base font-bold text-white">
+        Shared Schema
+      </div>
+      <p className="mt-3 text-sm text-white/60">
+        Standardize lead times, capacity, materials, and vendor data into a common
+        interoperable structure across factories.
+      </p>
+    </Card>
+
+    <Card className="p-7">
+      <div className="text-base font-bold text-white">
+        Intelligence Network
+      </div>
+      <p className="mt-3 text-sm text-white/60">
+        Predict supply constraints, rebalance production, and coordinate
+        workloads across connected operations.
+      </p>
+    </Card>
+
+  </div>
+
+  <p className="mt-8 text-center text-white/60 max-w-2xl mx-auto text-sm">
+    A connected manufacturing network that reduces lead times and strengthens resilience.
+  </p>
+</div>
     </main>
   );
 }
