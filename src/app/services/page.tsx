@@ -95,14 +95,15 @@ const ROLLOUT_STEPS = [
 
 export default function ServicesPage() {
   return (
-    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-16">
+    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-8">
 
       {/* ── HERO ── */}
       <Section from="up">
-        <h1 className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl">
-          Practical services that help factories run better, faster.
+        <h1 className="text-center font-serif text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-6xl">
+          Practical services that help factories run{" "}
+          <em>better, faster.</em>
         </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/60">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/45">
           Fast implementation, simpler daily operations, and automation that saves real time.
         </p>
       </Section>
@@ -110,20 +111,20 @@ export default function ServicesPage() {
       {/* ── WHAT THIS SERVICE LAYER HANDLES ── */}
       <div className="mt-20">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            What this service layer handles
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            What this service layer <em>handles</em>
           </h2>
         </Reveal>
 
         {/* Document automation lane — full width, pop from above */}
         <Pop delay={0.1}>
-          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-            <div className="text-sm font-bold text-white">Document automation lane</div>
-            <div className="mt-0.5 text-xs text-white/40">
+          <div className="mt-8 rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+            <div className="text-sm font-semibold text-white/80">Document automation lane</div>
+            <div className="mt-0.5 text-xs text-white/35">
               RFQ → Quote → PO → GRN → Invoice with auto-routing
             </div>
 
-            <div className="mt-4 rounded-2xl border border-white/5 bg-black/30 p-6">
+            <div className="mt-4 rounded-xl border border-white/5 bg-black/40 p-6">
               {/* Flow row: RFQ → Quote → PO → GRN → Invoice */}
               <div className="flex items-center justify-between gap-2">
                 {["RFQ", "Quote", "PO", "GRN", "Invoice"].map((step, i) => (
@@ -172,14 +173,14 @@ export default function ServicesPage() {
         </Pop>
 
         {/* Bottom row: Vendor matrix + Real-time channels */}
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
+        <div className="mt-3 grid gap-3 md:grid-cols-2">
 
           {/* Vendor matrix — slides from left, rows stagger in */}
           <Reveal from="left" delay={0.1}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-              <div className="text-sm font-bold text-white">Vendor matrix</div>
-              <div className="mt-0.5 text-xs text-white/40">Cost, lead, and risk scored for each supplier</div>
-              <div className="mt-5 rounded-2xl border border-white/5 bg-black/30 p-4">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+              <div className="text-sm font-semibold text-white/80">Vendor matrix</div>
+              <div className="mt-0.5 text-xs text-white/35">Cost, lead, and risk scored for each supplier</div>
+              <div className="mt-5 rounded-xl border border-white/5 bg-black/40 p-4">
                 <div className="mb-3 grid grid-cols-5 gap-2 px-1 text-xs text-white/35">
                   {["Vendor", "Cost", "Lead", "Risk", "Score"].map((h) => (
                     <div key={h}>{h}</div>
@@ -206,10 +207,10 @@ export default function ServicesPage() {
 
           {/* Real-time channels — slides from right, items stagger */}
           <Reveal from="right" delay={0.1}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-              <div className="text-sm font-bold text-white">Real-time channels</div>
-              <div className="mt-0.5 text-xs text-white/40">Email and chat updates flowing into action queue</div>
-              <div className="mt-5 rounded-2xl border border-white/5 bg-black/30 p-5">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+              <div className="text-sm font-semibold text-white/80">Real-time channels</div>
+              <div className="mt-0.5 text-xs text-white/35">Email and chat updates flowing into action queue</div>
+              <div className="mt-5 rounded-xl border border-white/5 bg-black/40 p-5">
                 <div className="flex items-center gap-3">
                   {[
                     { label: "Sources", color: "bg-white/8" },
@@ -241,8 +242,8 @@ export default function ServicesPage() {
       {/* ── WHAT TEAMS VALUE MOST ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            What teams value most
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            What teams <em>value most</em>
           </h2>
         </Reveal>
         <div className="mt-8">
@@ -253,16 +254,16 @@ export default function ServicesPage() {
       {/* ── WHAT WE HANDLE ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            What we handle
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            What <em>we handle</em>
           </h2>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-3 md:grid-cols-2">
           {HANDLE_CARDS.map((card, i) => (
             <Pop key={card.title} delay={0.05 * i}>
               <Reveal from={card.from} delay={0.05 + i * 0.06}>
-                <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-colors hover:border-violet-500/30 hover:bg-violet-900/10">
+                <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl transition-colors hover:border-violet-500/20 hover:bg-violet-900/10">
                   <div className="text-base font-bold text-white">{card.title}</div>
                   <p className="mt-2 text-sm leading-relaxed text-white/55">{card.desc}</p>
                   <ul className="mt-4 space-y-2">
@@ -290,8 +291,8 @@ export default function ServicesPage() {
       {/* ── OPERATIONAL TOOLKIT ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Operational toolkit
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl" id="toolkit">
+            Operational <em>toolkit</em>
           </h2>
         </Reveal>
         <div className="mt-8">
@@ -302,15 +303,15 @@ export default function ServicesPage() {
       {/* ── COMMERCIAL MODEL ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Commercial model
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl" id="commercial">
+            <em>Commercial</em> model
           </h2>
         </Reveal>
 
         {/* Two pricing cards */}
-        <div className="mt-8 grid gap-4 md:grid-cols-2">
+        <div className="mt-8 grid gap-3 md:grid-cols-2">
           <Reveal from="left" delay={0.08}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
               <div className="text-base font-bold text-white">Quoted setup + monthly subscription</div>
               <p className="mt-2 text-sm text-white/50">Pricing matches your workflows and rollout scope.</p>
               <ul className="mt-5 space-y-2.5">
@@ -336,7 +337,7 @@ export default function ServicesPage() {
           </Reveal>
 
           <Reveal from="right" delay={0.08}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
               <div className="text-base font-bold text-white">Built to work with your current stack</div>
               <p className="mt-2 text-sm text-white/50">
                 Connect operational and financial systems while production keeps moving.
@@ -366,7 +367,7 @@ export default function ServicesPage() {
 
         {/* Rollout at a glance */}
         <Pop delay={0.1}>
-          <div className="mt-4 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+          <div className="mt-4 rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
             <div className="mb-5 text-center text-sm font-semibold text-white/70">
               Rollout at a glance
             </div>

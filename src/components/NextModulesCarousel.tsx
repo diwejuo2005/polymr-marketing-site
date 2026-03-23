@@ -72,7 +72,7 @@ export default function NextModulesCarousel() {
         <button
           onClick={prev}
           disabled={index === 0}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60 transition hover:border-white/30 hover:text-white disabled:opacity-25"
+          className="flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-black/5 text-zinc-500 transition hover:border-black/30 hover:text-zinc-900 disabled:opacity-25 dark:border-white/10 dark:bg-white/5 dark:text-white/60 dark:hover:border-white/30 dark:hover:text-white"
         >
           <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4">
             <path
@@ -85,7 +85,7 @@ export default function NextModulesCarousel() {
         <button
           onClick={next}
           disabled={index >= max}
-          className="flex h-8 w-8 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white/60 transition hover:border-white/30 hover:text-white disabled:opacity-25"
+          className="flex h-8 w-8 items-center justify-center rounded-full border border-black/10 bg-black/5 text-zinc-500 transition hover:border-black/30 hover:text-zinc-900 disabled:opacity-25 dark:border-white/10 dark:bg-white/5 dark:text-white/60 dark:hover:border-white/30 dark:hover:text-white"
         >
           <svg viewBox="0 0 16 16" fill="currentColor" className="h-4 w-4">
             <path

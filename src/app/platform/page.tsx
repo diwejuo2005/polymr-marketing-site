@@ -57,20 +57,21 @@ const CAPABILITIES = [
 
 export default function PlatformPage() {
   return (
-    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-16">
+    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-8">
 
       {/* ── HERO ── */}
       <Section from="up">
-        <h1 className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl">
-          Advanced manufacturing system layer built for small and mid-sized factories.
+        <h1 className="text-center font-serif text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-6xl">
+          Advanced manufacturing system layer built for{" "}
+          <em>small and mid-sized factories.</em>
         </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/60">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/45">
           Turn fragmented data into a live operating model for planning, purchasing, scheduling, and execution.
         </p>
       </Section>
 
       {/* ── 4 FEATURE CARDS — spring-pop ── */}
-      <div className="mt-10 grid gap-4 md:grid-cols-2">
+      <div className="mt-10 grid gap-3 md:grid-cols-2">
         {[
           {
             title: "Messy docs → structured production model",
@@ -90,9 +91,9 @@ export default function PlatformPage() {
           },
         ].map((c, i) => (
           <Pop key={c.title} delay={0.05 * i}>
-            <div className="rounded-3xl bg-white/5 p-6 ring-1 ring-white/10">
-              <div className="text-lg font-semibold text-white">{c.title}</div>
-              <div className="mt-2 text-sm text-white/65">{c.body}</div>
+            <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-6 transition-colors hover:border-violet-500/20 hover:bg-violet-900/10">
+              <div className="text-base font-semibold text-white/90">{c.title}</div>
+              <div className="mt-2 text-sm leading-relaxed text-white/45">{c.body}</div>
             </div>
           </Pop>
         ))}
@@ -101,23 +102,23 @@ export default function PlatformPage() {
       {/* ── PLATFORM PLANNING VISUALS ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Platform planning visuals
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Platform planning <em>visuals</em>
           </h2>
         </Reveal>
 
         {/* Real-time execution board */}
         <Pop delay={0.1}>
-          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-            <div className="text-sm font-bold text-white">Real-time execution board</div>
-            <div className="mt-0.5 text-xs text-white/40">Live line status, event feed, and throughput panels</div>
+          <div className="mt-8 rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+            <div className="text-sm font-semibold text-white/80">Real-time execution board</div>
+            <div className="mt-0.5 text-xs text-white/35">Live line status, event feed, and throughput panels</div>
 
-            <div className="mt-4 rounded-2xl border border-white/5 bg-black/30 p-5">
+            <div className="mt-4 rounded-xl border border-white/5 bg-black/40 p-5">
               <div className="grid grid-cols-3 gap-4">
 
                 {/* Line status — bars animate width */}
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <div className="mb-3 text-sm text-white/60">Line status</div>
+                <div className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                  <div className="mb-3 text-xs text-white/40">Line status</div>
                   <div className="space-y-2.5">
                     {[
                       { w: 88, color: "bg-emerald-500" },
@@ -126,7 +127,7 @@ export default function PlatformPage() {
                       { w: 30, color: "bg-white/20" },
                       { w: 20, color: "bg-white/20" },
                     ].map((row, i) => (
-                      <div key={i} className="h-6 overflow-hidden rounded-lg bg-black/30">
+                      <div key={i} className="h-6 overflow-hidden rounded-lg bg-black/40">
                         <motion.div
                           className={`h-full rounded-lg ${row.color}`}
                           initial={{ width: 0 }}
@@ -140,8 +141,8 @@ export default function PlatformPage() {
                 </div>
 
                 {/* Throughput — bars animate width */}
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <div className="mb-3 text-sm text-white/60">Throughput</div>
+                <div className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                  <div className="mb-3 text-xs text-white/40">Throughput</div>
                   <div className="space-y-4">
                     {[
                       { label: "Cut", val: 90 },
@@ -149,10 +150,10 @@ export default function PlatformPage() {
                       { label: "Pack", val: 62 },
                     ].map((item) => (
                       <div key={item.label} className="flex items-center gap-3">
-                        <div className="w-8 text-sm text-white/60">{item.label}</div>
-                        <div className="h-3 flex-1 overflow-hidden rounded-full bg-black/30">
+                        <div className="w-8 text-xs text-white/40">{item.label}</div>
+                        <div className="h-2 flex-1 overflow-hidden rounded-full bg-black/40">
                           <motion.div
-                            className="h-full rounded-full bg-violet-600"
+                            className="h-full rounded-full bg-violet-500"
                             initial={{ width: 0 }}
                             whileInView={{ width: `${item.val}%` }}
                             viewport={{ once: true }}
@@ -165,13 +166,13 @@ export default function PlatformPage() {
                 </div>
 
                 {/* Event feed — items slide in from right */}
-                <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-                  <div className="mb-3 text-sm text-white/60">Event feed</div>
+                <div className="rounded-xl border border-white/8 bg-white/[0.03] p-4">
+                  <div className="mb-3 text-xs text-white/40">Event feed</div>
                   <div className="space-y-2.5">
                     {[80, 60, 90, 55, 70].map((w, i) => (
                       <motion.div
                         key={i}
-                        className="h-6 rounded-lg bg-white/8"
+                        className="h-6 rounded-lg bg-white/[0.06]"
                         initial={{ opacity: 0, x: 16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -187,15 +188,15 @@ export default function PlatformPage() {
         </Pop>
 
         {/* Bottom row */}
-        <div className="mt-4 grid gap-4 md:grid-cols-2">
+        <div className="mt-3 grid gap-3 md:grid-cols-2">
 
           {/* MRP table — slides from left, rows stagger in */}
           <Reveal from="left" delay={0.1}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-              <div className="text-sm font-bold text-white">MRP table view</div>
-              <div className="mt-0.5 text-xs text-white/40">Weekly plan by item with shortage visibility</div>
-              <div className="mt-5 rounded-2xl border border-white/5 bg-black/30 p-4">
-                <div className="mb-3 grid grid-cols-6 gap-1 px-1 text-xs text-white/35">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+              <div className="text-sm font-semibold text-white/80">MRP table view</div>
+              <div className="mt-0.5 text-xs text-white/35">Weekly plan by item with shortage visibility</div>
+              <div className="mt-5 rounded-xl border border-white/5 bg-black/40 p-4">
+                <div className="mb-3 grid grid-cols-6 gap-1 px-1 text-xs text-white/25">
                   {["Item", "W1", "W2", "W3", "W4", "Risk"].map((h) => (
                     <div key={h}>{h}</div>
                   ))}
@@ -205,14 +206,14 @@ export default function PlatformPage() {
                     (color, i) => (
                       <motion.div
                         key={i}
-                        className="grid grid-cols-6 items-center gap-1 rounded-lg bg-white/5 px-3 py-2.5"
+                        className="grid grid-cols-6 items-center gap-1 rounded-lg bg-white/[0.04] px-3 py-2.5"
                         initial={{ opacity: 0, x: -16 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.25 + i * 0.09, duration: 0.4 }}
                       >
-                        <div className="col-span-5 h-2 rounded bg-white/10" />
-                        <div className={`h-5 w-8 rounded ${color}`} />
+                        <div className="col-span-5 h-2 rounded bg-white/8" />
+                        <div className={`h-4 w-8 rounded ${color}`} />
                       </motion.div>
                     )
                   )}
@@ -223,10 +224,10 @@ export default function PlatformPage() {
 
           {/* Live signal board — slides from right, items scale in */}
           <Reveal from="right" delay={0.1}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
-              <div className="text-sm font-bold text-white">Live signal board</div>
-              <div className="mt-0.5 text-xs text-white/40">Incoming updates mapped to action queue in real time</div>
-              <div className="mt-5 rounded-2xl border border-white/5 bg-black/30 p-5">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
+              <div className="text-sm font-semibold text-white/80">Live signal board</div>
+              <div className="mt-0.5 text-xs text-white/35">Incoming updates mapped to action queue in real time</div>
+              <div className="mt-5 rounded-xl border border-white/5 bg-black/40 p-5">
                 <div className="flex items-center gap-3">
                   <div className="flex-1">
                     <div className="mb-2 text-xs text-white/35">Incoming</div>
@@ -282,13 +283,14 @@ export default function PlatformPage() {
       </div>
 
       {/* ── ENTERPRISE CALLOUT ── */}
-      <div className="mt-12">
+      <div className="mt-10">
         <Pop delay={0.05}>
-          <div className="rounded-3xl border border-violet-500/20 bg-violet-900/15 p-8 backdrop-blur-xl">
-            <h3 className="text-2xl font-bold text-white md:text-3xl">
-              Built for small and mid-sized factories, and ready for enterprise-scale deployments.
+          <div className="rounded-2xl border border-violet-500/15 bg-violet-900/10 p-8 backdrop-blur-xl">
+            <h3 className="font-serif text-2xl font-bold text-white md:text-3xl">
+              Built for small and mid-sized factories, and ready for{" "}
+              <em>enterprise-scale deployments.</em>
             </h3>
-            <p className="mt-3 text-sm leading-relaxed text-white/55">
+            <p className="mt-3 text-sm leading-relaxed text-white/45">
               Built for lean teams first, with support for larger organizations and multi-site operations.
             </p>
           </div>
@@ -296,19 +298,19 @@ export default function PlatformPage() {
       </div>
 
       {/* ── CAPABILITIES IN PRODUCTION TODAY ── */}
-      <div className="mt-24">
+      <div className="mt-24" id="capabilities">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Capabilities in production today.
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Capabilities in <em>production today.</em>
           </h2>
         </Reveal>
 
         <div className="mt-8 grid gap-3 md:grid-cols-2">
           {CAPABILITIES.map((cap, i) => (
             <Pop key={cap.title} delay={0.04 * i}>
-              <div className="rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl transition-colors hover:border-violet-500/30 hover:bg-violet-900/10">
-                <div className="text-sm font-bold text-white">{cap.title}</div>
-                <p className="mt-1.5 text-sm leading-relaxed text-white/55">{cap.desc}</p>
+              <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-5 backdrop-blur-xl transition-colors hover:border-violet-500/20 hover:bg-violet-900/10">
+                <div className="text-sm font-semibold text-white/90">{cap.title}</div>
+                <p className="mt-1.5 text-sm leading-relaxed text-white/45">{cap.desc}</p>
               </div>
             </Pop>
           ))}
@@ -316,10 +318,10 @@ export default function PlatformPage() {
       </div>
 
       {/* ── NEXT MODULES ── */}
-      <div className="mt-24">
+      <div className="mt-24" id="next-modules">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Next modules.
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            <em>Next</em> modules.
           </h2>
         </Reveal>
         <div className="mt-8">
@@ -330,16 +332,16 @@ export default function PlatformPage() {
       {/* ── COMPETITOR COMPARISON ── */}
       <div className="mt-24">
         <Reveal from="up">
-          <h2 className="text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Most alternatives still depend on manual setup.
+          <h2 className="font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Most alternatives still depend on <em>manual setup.</em>
           </h2>
-          <p className="mt-2 text-sm text-white/45">
+          <p className="mt-3 text-sm text-white/40">
             Many systems still require heavy manual configuration, which is costly for smaller teams.
           </p>
         </Reveal>
         <div className="mt-8">
           <Pop delay={0.1}>
-            <div className="rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+            <div className="rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
               <ComparisonTable />
             </div>
           </Pop>

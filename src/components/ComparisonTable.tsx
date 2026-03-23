@@ -114,7 +114,7 @@ export default function ComparisonTable() {
               "rounded-full px-4 py-1.5 text-sm font-medium transition",
               selected === c
                 ? "bg-violet-600 text-white"
-                : "border border-white/10 bg-white/5 text-white/60 hover:border-violet-500/40 hover:text-white",
+                : "border border-black/10 bg-black/5 text-zinc-500 hover:border-violet-500/40 hover:text-zinc-900 dark:border-white/10 dark:bg-white/5 dark:text-white/60 dark:hover:text-white",
             ].join(" ")}
           >
             {c}
@@ -123,12 +123,12 @@ export default function ComparisonTable() {
       </div>
 
       {/* Table */}
-      <div className="mt-6 overflow-hidden rounded-2xl border border-white/10">
+      <div className="mt-6 overflow-hidden rounded-2xl border border-black/10 dark:border-white/10">
         {/* Header */}
-        <div className="grid grid-cols-3 border-b border-white/10 bg-white/5 px-4 py-3 text-xs font-semibold text-white/50">
+        <div className="grid grid-cols-3 border-b border-black/10 bg-black/5 px-4 py-3 text-xs font-semibold text-zinc-500 dark:border-white/10 dark:bg-white/5 dark:text-white/50">
           <div>Category</div>
           <div>{selected}</div>
-          <div className="text-violet-400">Polymr</div>
+          <div className="text-violet-600 dark:text-violet-400">Polymr</div>
         </div>
 
         {/* Rows */}
@@ -137,17 +137,17 @@ export default function ComparisonTable() {
             key={row}
             className={[
               "grid grid-cols-3 gap-4 px-4 py-4 text-sm",
-              i < ROWS.length - 1 ? "border-b border-white/5" : "",
+              i < ROWS.length - 1 ? "border-b border-black/5 dark:border-white/5" : "",
             ].join(" ")}
           >
-            <div className="font-medium text-white/80">{row}</div>
-            <div className="text-white/55 leading-relaxed">{compData[i]}</div>
-            <div className="text-white/80 leading-relaxed">{POLYMR_COL[i]}</div>
+            <div className="font-medium text-zinc-800 dark:text-white/80">{row}</div>
+            <div className="leading-relaxed text-zinc-500 dark:text-white/55">{compData[i]}</div>
+            <div className="leading-relaxed text-zinc-800 dark:text-white/80">{POLYMR_COL[i]}</div>
           </div>
         ))}
       </div>
 
-      <p className="mt-3 text-xs text-white/30">
+      <p className="mt-3 text-xs text-zinc-400 dark:text-white/30">
         Select a competitor above to compare setup, fit, and pricing model side by side. Pricing notes reflect common public packaging patterns and project structures; exact quotes vary by scope.
       </p>
     </div>

@@ -3,10 +3,10 @@ import Link from "next/link";
 
 export default function DemoPage() {
   return (
-    <main className="mx-auto max-w-6xl px-4 pt-12">
+    <main className="mx-auto max-w-[1440px] px-6 pt-12 lg:px-8">
       <Section from="up">
-        <h1 className="text-center text-4xl font-semibold tracking-tight md:text-5xl">
-          See Polymr run a manufacturing workflow end-to-end.
+        <h1 className="text-center font-serif text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-6xl">
+          See Polymr run a manufacturing workflow <em>end-to-end.</em>
         </h1>
         <p className="mx-auto mt-4 max-w-3xl text-center text-sm text-white/70">
           Watch the walkthrough, then share your setup so we can tailor the session to your constraints.

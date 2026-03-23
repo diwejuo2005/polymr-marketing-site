@@ -2,10 +2,10 @@ import Section from "@/components/Section";
 
 export default function ContactPage() {
   return (
-    <main className="mx-auto max-w-3xl px-4 pt-12">
+    <main className="mx-auto max-w-5xl px-6 pt-12 lg:px-8">
       <Section from="up">
-        <h1 className="text-center text-4xl font-semibold tracking-tight md:text-5xl">
-          Contact sales
+        <h1 className="text-center font-serif text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-6xl">
+          Contact <em>sales</em>
         </h1>
         <p className="mx-auto mt-4 max-w-2xl text-center text-sm text-white/70">
           Tell us what you build, what tools you use today, and what you want to automate first.

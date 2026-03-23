@@ -106,14 +106,15 @@ const CASE_STUDIES = [
 
 export default function PartnershipsPage() {
   return (
-    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-16">
+    <main className="mx-auto max-w-[1440px] px-6 pb-24 pt-12 lg:px-8">
 
       {/* ── HERO ── */}
       <Section from="up">
-        <h1 className="text-center text-4xl font-bold tracking-tight text-white md:text-5xl">
-          Partner with Polymr to modernize manufacturing operations faster.
+        <h1 className="text-center font-serif text-4xl font-bold leading-[1.08] tracking-[-0.01em] text-white md:text-5xl lg:text-6xl">
+          Partner with Polymr to modernize{" "}
+          <em>manufacturing operations faster.</em>
         </h1>
-        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/60">
+        <p className="mx-auto mt-4 max-w-3xl text-center text-sm leading-relaxed text-white/45">
           We work with factories, integration firms, and sourcing networks that need faster deployment and clearer execution.
         </p>
       </Section>
@@ -121,18 +122,18 @@ export default function PartnershipsPage() {
       {/* ── PARTNERSHIP ROLLOUT VISUALS ── */}
       <div className="mt-20">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Partnership rollout visuals
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Partnership rollout <em>visuals</em>
           </h2>
         </Reveal>
 
         {/* Network visibility panel */}
         <Pop delay={0.1}>
-          <div className="mt-8 rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+          <div className="mt-8 rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
             <div className="text-sm font-bold text-white">Network visibility panel</div>
             <div className="mt-0.5 text-xs text-white/40">Factory + partner + operator visibility on one shared board</div>
 
-            <div className="mt-4 rounded-2xl border border-white/5 bg-black/30 p-6">
+            <div className="mt-4 rounded-xl border border-white/5 bg-black/40 p-6">
               <div className="flex items-stretch gap-3">
 
                 {/* Factories column */}
@@ -228,9 +229,10 @@ export default function PartnershipsPage() {
       {/* ── FREE CONFIG CALLOUT ── */}
       <div className="mt-8">
         <Pop delay={0.08}>
-          <div className="rounded-3xl border border-violet-500/20 bg-violet-900/15 p-8 text-center backdrop-blur-xl">
-            <h3 className="text-2xl font-bold text-white md:text-3xl">
-              Free configuration, a free trial period, and referral credit options.
+          <div className="rounded-2xl border border-violet-500/15 bg-violet-900/10 p-8 text-center backdrop-blur-xl">
+            <h3 className="font-serif text-2xl font-bold text-white md:text-3xl">
+              Free configuration, a free trial period, and{" "}
+              <em>referral credit options.</em>
             </h3>
             <p className="mt-3 text-sm text-white/50">
               Contact us to review eligibility for your factory or client portfolio.
@@ -248,15 +250,15 @@ export default function PartnershipsPage() {
       {/* ── DEPLOYMENT RANGE ── */}
       <div className="mt-20">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Deployment range across factory sizes.
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Deployment range across <em>factory sizes.</em>
           </h2>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-4">
+        <div className="mt-8 grid gap-3 md:grid-cols-4">
           {STATS.map((stat, i) => (
             <Pop key={stat.k} delay={0.05 + i * 0.07}>
-              <div className="h-full rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur-xl">
+              <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-5 text-center backdrop-blur-xl">
                 <motion.div
                   className="text-3xl font-bold text-white"
                   initial={{ opacity: 0, scale: 0.6 }}
@@ -279,7 +281,7 @@ export default function PartnershipsPage() {
         <div className="grid gap-4 md:grid-cols-3">
           {PARTNER_TYPES.map((p, i) => (
             <Reveal key={p.title} from={p.from} delay={0.06 * i}>
-              <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl transition-colors hover:border-violet-500/30 hover:bg-violet-900/10">
+              <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl transition-colors hover:border-violet-500/20 hover:bg-violet-900/10">
                 <div className="text-base font-bold text-white">{p.title}</div>
                 <p className="mt-2 text-sm leading-relaxed text-white/55">{p.desc}</p>
                 <ul className="mt-4 space-y-2">
@@ -306,8 +308,8 @@ export default function PartnershipsPage() {
       {/* ── INTEGRATIONS ── */}
       <div className="mt-20">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Integrations
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            <em>Integrations</em>
           </h2>
           <p className="mt-2 text-center text-sm text-white/45">
             Need another tool? We can integrate with any software you request.
@@ -337,15 +339,15 @@ export default function PartnershipsPage() {
       {/* ── CASE STUDIES ── */}
       <div className="mt-20">
         <Reveal from="up">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-white md:text-4xl">
-            Case studies from active factory deployments.
+          <h2 className="text-center font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+            Case studies from <em>active factory deployments.</em>
           </h2>
         </Reveal>
 
-        <div className="mt-8 grid gap-4 md:grid-cols-3">
+        <div className="mt-8 grid gap-3 md:grid-cols-3">
           {CASE_STUDIES.map((cs, i) => (
             <Reveal key={cs.company} from={cs.from} delay={0.07 * i}>
-              <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-6 backdrop-blur-xl">
+              <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-6 backdrop-blur-xl">
                 <div className="text-base font-bold text-white">{cs.company}</div>
                 <div className="mt-0.5 text-xs text-white/40">{cs.location}</div>
                 <p className="mt-3 text-sm leading-relaxed text-white/60">{cs.desc}</p>
@@ -376,7 +378,7 @@ export default function PartnershipsPage() {
 
           {/* Inquiry card — pops from left */}
           <Reveal from="left" delay={0.08}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-7 backdrop-blur-xl">
               <div className="text-xl font-bold text-white">Partnership inquiry</div>
               <p className="mt-2 text-sm leading-relaxed text-white/55">
                 Email your organization details and goals. We will respond with a recommended structure.
@@ -417,7 +419,7 @@ export default function PartnershipsPage() {
 
           {/* Helpful info card — pops from right */}
           <Reveal from="right" delay={0.08}>
-            <div className="h-full rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-xl">
+            <div className="h-full rounded-2xl border border-white/8 bg-white/[0.03] p-7 backdrop-blur-xl">
               <div className="text-xl font-bold text-white">Helpful info for faster qualification.</div>
               <ul className="mt-5 space-y-3">
                 {[

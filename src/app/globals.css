@@ -3,23 +3,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Force dark as default */
 html,
 body {
   height: 100%;
 }
 
 body {
-  background: radial-gradient(
-      circle at 15% 15%,
-      rgba(139, 92, 246, 0.35),
-      transparent 45%
-    ),
-    radial-gradient(
-      circle at 85% 5%,
-      rgba(124, 58, 237, 0.25),
-      transparent 45%
-    ),
-    linear-gradient(180deg, #1a1033 0%, #110b22 100%);
+  background: #08040f;
   color: #f4f4f5;
+  font-family: var(--font-sans, ui-sans-serif, system-ui, sans-serif);
+}
+
+em {
+  font-style: italic;
 }
